@@ -151,16 +151,16 @@ int main(int argc, char* argv[]) {
     std::cout << "Starting solve with " << argv[0];
     switch (options.solverType) {
         case SolverType::SEQUENTIAL:
-            std::cout << " (Sequential solver)";
+            std::cout << "Sequential solver";
             break;
         case SolverType::TASK_PARALLEL:
-            std::cout << " (Task parallel with " << options.numThreads << " threads)";
+            std::cout << "Task parallel with " << options.numThreads << " threads";
             break;
         case SolverType::DATA_PARALLEL:
-            std::cout << " (Data parallel with " << options.numThreads << " threads)";
+            std::cout << "Data parallel with " << options.numThreads << " threads";
             break;
         case SolverType::MPI:
-            std::cout << " (MPI with " << options.numNodes << " nodes)";
+            std::cout << "MPI with " << options.numNodes << " nodes and " << options.numThreads << " threads";
             break;
     }
     std::cout << "\n";
